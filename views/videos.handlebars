@@ -1,0 +1,13 @@
+{{> header}}
+<div class="body">
+    <div class="videos-wrapper">
+        <div class="video-body">
+            {{#each videos}}
+                <div class="video">
+                    {{{this.metadata.embed_code}}}
+                </div>
+            {{/each}}
+        </div>
+    </div>
+    {{> footer}}
+</div>

@@ -1,0 +1,332 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins");
+@import url("https://fonts.googleapis.com/css?family=Nixie+One");
+html {
+  height: 100%; }
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #212121;
+  height: 100%; }
+
+.bold {
+  font-weight: bold; }
+
+.body {
+  position: absolute;
+  top: 194px;
+  min-height: calc(100vh - 194px);
+  width: 100%; }
+  @media (max-width: 767px) {
+    .body {
+      top: 110px;
+      min-height: calc(100vh - 110px); } }
+  .body .tour-body-wrapper .tour-body {
+    padding: 50px 30px; }
+    .body .tour-body-wrapper .tour-body .tour-container {
+      padding: 20px 50px;
+      background: #303030;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 8px solid #0175A1; }
+      .body .tour-body-wrapper .tour-body .tour-container:not(:last-child) {
+        margin-bottom: 20px; }
+      .body .tour-body-wrapper .tour-body .tour-container div:first-child {
+        color: rgba(255, 255, 255, 0.7); }
+        .body .tour-body-wrapper .tour-body .tour-container div:first-child h1 {
+          color: #fff;
+          font-family: 'Nixie One';
+          text-shadow: 1px 1px #03adee; }
+      .body .tour-body-wrapper .tour-body .tour-container a {
+        font-family: 'Nixie One';
+        border: 2px solid #fff;
+        padding: 12px;
+        white-space: nowrap; }
+        .body .tour-body-wrapper .tour-body .tour-container a:hover {
+          border-color: #EE7E03; }
+      @media (max-width: 767px) {
+        .body .tour-body-wrapper .tour-body .tour-container {
+          flex-direction: column;
+          padding-bottom: 40px; }
+          .body .tour-body-wrapper .tour-body .tour-container div:first-child {
+            margin-bottom: 20px; } }
+  .body .album-wrapper {
+    padding: 30px;
+    text-align: center; }
+    .body .album-wrapper h1 {
+      font-family: 'Nixie One';
+      color: #fff;
+      text-shadow: 1px 1px #0175A1;
+      font-size: 2rem; }
+    .body .album-wrapper h4 {
+      color: rgba(255, 255, 255, 0.3); }
+    .body .album-wrapper .album-body {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center; }
+      .body .album-wrapper .album-body .photo {
+        margin: 15px; }
+  .body .bio-wrapper {
+    background-attachment: fixed;
+    background-size: cover; }
+    .body .bio-wrapper .bio-body {
+      padding: 20px; }
+      .body .bio-wrapper .bio-body .bio {
+        background: rgba(48, 48, 48, 0.9);
+        padding: 30px;
+        color: #fff;
+        font-family: 'Nixie One';
+        font-size: 1.6em;
+        line-height: 1.6; }
+  .body .videos-wrapper {
+    padding: 20px; }
+    .body .videos-wrapper .video-body {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center; }
+      .body .videos-wrapper .video-body .video {
+        margin: 20px; }
+  .body .gallery-wrapper {
+    padding: 40px 60px;
+    display: flex;
+    justify-content: center; }
+    .body .gallery-wrapper .gallery-body {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-gap: 30px; }
+      .body .gallery-wrapper .gallery-body .gallery {
+        background: #303030;
+        text-align: center; }
+        .body .gallery-wrapper .gallery-body .gallery img {
+          width: 100%; }
+  .body .banner-image-container {
+    width: 100%;
+    height: 400px;
+    background-attachment: scroll;
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .body .banner-image-container .cta {
+      user-select: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%; }
+      @media (max-width: 767px) {
+        .body .banner-image-container .cta {
+          flex-direction: column;
+          justify-content: center; } }
+      .body .banner-image-container .cta a {
+        text-align: center;
+        font-family: 'Nixie One', sans-serif;
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: 1.75rem;
+        border: 2px solid #fff;
+        padding: 16px;
+        color: #fff;
+        text-decoration: none;
+        background: rgba(48, 48, 48, 0.5); }
+        @media (max-width: 767px) {
+          .body .banner-image-container .cta a {
+            margin-right: 0 !important;
+            margin-bottom: 35px; } }
+        .body .banner-image-container .cta a:hover {
+          background: rgba(48, 48, 48, 0.3);
+          color: #EE7E03;
+          border-color: #EE7E03; }
+        .body .banner-image-container .cta a:first-child {
+          margin-right: 30px; }
+  .body .content-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 30px;
+    padding: 30px 50px; }
+    @media (max-width: 767px) {
+      .body .content-wrapper {
+        grid-template-columns: 1fr;
+        padding: 0;
+        grid-gap: 0; } }
+    .body .content-wrapper .box {
+      background: #303030; }
+      .body .content-wrapper .box h1 {
+        background: #03adee;
+        margin: 0;
+        color: #fff;
+        font-family: 'Nixie One';
+        padding: 16px;
+        text-align: center; }
+      .body .content-wrapper .box > div {
+        padding: 35px 20px; }
+      .body .content-wrapper .box .bio {
+        color: #fff;
+        font-size: 1.2rem;
+        line-height: 1.7;
+        font-family: 'Nixie One'; }
+        .body .content-wrapper .box .bio a {
+          display: block;
+          text-align: right;
+          text-decoration: underline; }
+      .body .content-wrapper .box .tour-date {
+        color: #fff;
+        font-size: 1.2rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.8); }
+        .body .content-wrapper .box .tour-date .date {
+          margin: 7px 0 12px;
+          display: block;
+          color: rgba(255, 255, 255, 0.8); }
+        .body .content-wrapper .box .tour-date .ticket-button {
+          text-align: right;
+          margin-bottom: 20px;
+          font-family: 'Nixen One'; }
+        .body .content-wrapper .box .tour-date:not(:last-child) {
+          margin-bottom: 30px; }
+
+header {
+  width: 100%;
+  position: fixed;
+  z-index: 99;
+  border-bottom: 10px solid #0175A1; }
+  header .mobile-menu {
+    position: fixed;
+    top: 109px;
+    width: 100%;
+    background: #303030;
+    transition: visibility 0.5s ease, height 0.5s;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 2em;
+    line-height: 2;
+    padding-top: 70px; }
+    @media (min-width: 767px) {
+      header .mobile-menu {
+        display: none; } }
+    header .mobile-menu form {
+      margin-top: 20px;
+      flex-direction: column; }
+      header .mobile-menu form input[name="email"] {
+        margin-bottom: 20px !important; }
+    header .mobile-menu div {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px; }
+      header .mobile-menu div a:not(:last-child) {
+        margin-right: 20px; }
+    header .mobile-menu a, header .mobile-menu div {
+      transition: opacity 0.5s; }
+    header .mobile-menu[data-state="closed"] {
+      visibility: hidden;
+      height: 0; }
+      header .mobile-menu[data-state="closed"] a, header .mobile-menu[data-state="closed"] div {
+        opacity: 0; }
+    header .mobile-menu[data-state="open"] {
+      visibility: visible;
+      height: calc(100vh - 109px); }
+      header .mobile-menu[data-state="open"] a, header .mobile-menu[data-state="open"] div {
+        opacity: 1; }
+  header .header-top {
+    background: #03adee;
+    color: #fff;
+    padding: 15px 50px;
+    line-height: 1.2;
+    font-size: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    header .header-top a:not(:last-child) {
+      margin-right: 12px; }
+    @media (max-width: 800px) {
+      header .header-top {
+        padding: 15px 30px; } }
+    @media (max-width: 767px) {
+      header .header-top {
+        display: none; } }
+  header .header-bottom {
+    background: #303030;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 22px; }
+    header .header-bottom * {
+      display: inline-block; }
+    header .header-bottom div {
+      user-select: none; }
+    header .header-bottom nav {
+      flex: 1;
+      text-align: center;
+      font-size: 1.5rem;
+      line-height: 2; }
+      @media (max-width: 768px) {
+        header .header-bottom nav {
+          text-align: right; } }
+      header .header-bottom nav a:not(:last-child) {
+        margin-right: 16px; }
+        @media (max-width: 768px) {
+          header .header-bottom nav a:not(:last-child) {
+            display: none; } }
+        @media (width: 768px) {
+          header .header-bottom nav a:not(:last-child) {
+            display: inline-block; } }
+  header #dropdown-toggle {
+    font-size: 2rem;
+    margin-right: 40px; }
+    @media (min-width: 768px) {
+      header #dropdown-toggle {
+        display: none; } }
+
+footer {
+  background: #0175A1;
+  color: #fff;
+  padding: 50px;
+  text-align: center; }
+  footer div {
+    margin-bottom: 30px; }
+  footer a {
+    font-size: 1.5rem; }
+    footer a:not(:last-child) {
+      margin-right: 15px; }
+  @media (max-width: 767px) {
+    footer form {
+      flex-direction: column; }
+      footer form input[name="email"] {
+        margin-bottom: 20px !important; } }
+
+.nav-links a, .body .tour-body-wrapper .tour-body .tour-container a, .body .gallery-wrapper a, .body .content-wrapper .box a, header a, footer a, .nav-links #dropdown-toggle, .body .tour-body-wrapper .tour-body .tour-container #dropdown-toggle, .body .gallery-wrapper #dropdown-toggle, .body .content-wrapper .box #dropdown-toggle, header #dropdown-toggle, footer #dropdown-toggle {
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer; }
+  .nav-links a:hover, .body .tour-body-wrapper .tour-body .tour-container a:hover, .body .gallery-wrapper a:hover, .body .content-wrapper .box a:hover, header a:hover, footer a:hover, .nav-links #dropdown-toggle:hover, .body .tour-body-wrapper .tour-body .tour-container #dropdown-toggle:hover, .body .gallery-wrapper #dropdown-toggle:hover, .body .content-wrapper .box #dropdown-toggle:hover, header #dropdown-toggle:hover, footer #dropdown-toggle:hover {
+    color: #EE7E03; }
+  .nav-links a:active, .body .tour-body-wrapper .tour-body .tour-container a:active, .body .gallery-wrapper a:active, .body .content-wrapper .box a:active, header a:active, footer a:active, .nav-links #dropdown-toggle:active, .body .tour-body-wrapper .tour-body .tour-container #dropdown-toggle:active, .body .gallery-wrapper #dropdown-toggle:active, .body .content-wrapper .box #dropdown-toggle:active, header #dropdown-toggle:active, footer #dropdown-toggle:active {
+    color: #EE7E03; }
+  .nav-links a:focus, .body .tour-body-wrapper .tour-body .tour-container a:focus, .body .gallery-wrapper a:focus, .body .content-wrapper .box a:focus, header a:focus, footer a:focus, .nav-links #dropdown-toggle:focus, .body .tour-body-wrapper .tour-body .tour-container #dropdown-toggle:focus, .body .gallery-wrapper #dropdown-toggle:focus, .body .content-wrapper .box #dropdown-toggle:focus, header #dropdown-toggle:focus, footer #dropdown-toggle:focus {
+    color: #EE7E03; }
+
+.contact-form form, header form, footer form {
+  display: inline-flex;
+  align-items: center;
+  font-size: 1.5rem; }
+  .contact-form form *, header form *, footer form * {
+    display: inline-block; }
+  .contact-form form input[name="email"], header form input[name="email"], footer form input[name="email"] {
+    height: 2rem;
+    padding: 4px 10px;
+    border: 0;
+    outline: 0;
+    margin: 0 5px 0 0;
+    text-transform: lowercase; }
+  .contact-form form input[type="submit"], header form input[type="submit"], footer form input[type="submit"] {
+    cursor: pointer;
+    padding: 6px 12px;
+    border: 2px solid white;
+    line-height: 1.2;
+    font-size: calc(1.5rem - 2px);
+    background: none;
+    color: white;
+    text-transform: uppercase; }
+    .contact-form form input[type="submit"]:hover, header form input[type="submit"]:hover, footer form input[type="submit"]:hover {
+      background: #EE7E03; }

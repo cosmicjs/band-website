@@ -1,0 +1,16 @@
+{{> header}}
+<div class="body">
+    <div class="gallery-wrapper">
+        <div class="gallery-body">
+            {{#each galleries}}
+                <div class="gallery">
+                    <a href="/photo-gallery/{{this.slug}}">
+                        <img src="{{this.metadata.cover_photo.url}}" />
+                        <h4>{{this.title}}</h4>
+                    </a>
+                </div>
+            {{/each}}
+        </div>
+    </div>
+    {{> footer}}
+</div>

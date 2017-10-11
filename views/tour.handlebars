@@ -1,0 +1,19 @@
+{{> header}}
+<div class="body">
+    <div class="tour-body-wrapper">
+        <div class="tour-body">
+            {{#each tourDates}}
+                <div class="tour-container">
+                    <div>
+                        <h1>{{this.title}}</h1>
+                        <h4>{{this.metadata.location}} - {{formatDate this.metadata.date}}</h4>
+                    </div>
+                    <div>
+                        <a href="{{this.metadata.ticket_link}}">Get Tickets</a>
+                    </div>
+                </div>
+            {{/each}}
+        </div>
+    </div>
+    {{> footer}}
+</div>

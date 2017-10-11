@@ -1,0 +1,30 @@
+<header>
+    <div class="mobile-menu" data-state="closed">
+        {{> nav-links}}
+        {{> signup-form}}
+        <div>
+            {{> social-links}}
+        </div>
+    </div>
+    <div class="header-top">
+        <div>
+            {{> social-links}}
+        </div>
+        {{> signup-form}}
+    </div>
+    <div class="header-bottom">
+        <div class="banner">
+            <a href="/">
+                {{#if settings.logo}}
+                    <img height="90" src="{{settings.logo.url}}" /> 
+                {{else}}
+                    <h1>{{settings.bandName}}</h1>
+                {{/if}}
+            </a>
+        </div>
+        <nav>
+            {{> nav-links}}
+            <i data-state="closed" class="fa fa-bars" id="dropdown-toggle"></i>
+        </nav>
+    </div>
+</header>

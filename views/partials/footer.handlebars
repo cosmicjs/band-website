@@ -1,0 +1,13 @@
+<footer>
+    <div>
+        <i class="fa fa-copyright"></i>
+        {{#getYear}}{{/getYear}} {{settings.band_name}}
+    </div>
+    <div>
+        {{#each socials}}
+        <a class="social-link" href="{{this}}" target="_blank">
+            <i class="fa fa-{{@key}}" title="{{@key}}"></i>
+        </a> {{/each}}
+    </div>
+    {{> signup-form}}
+</footer>

@@ -1,0 +1,15 @@
+{{> header}}
+<div class="body">
+    <div class="album-wrapper">
+        <h1>{{album.title}}</h1>
+        <h4>{{formatDate album.metadata.date}}</h4>
+        <div class="album-body">
+            {{#each photos}}
+                <div class="photo">
+                    <a href="{{this.photo.url}}"><img height="200" src="{{this.photo.url}}" /></a>
+                </div>
+            {{/each}}
+        </div>
+    </div>
+    {{> footer}}
+</div>

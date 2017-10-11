@@ -1,0 +1,40 @@
+{{> header}}
+<div class="body">
+    <div class="banner-image-container" style="background-image: url({{homepage.banner_image.url}})">
+        <section class="cta">
+            <a href="/tour">Tour Dates</a>
+            <a href="/photo-gallery">Gallery</a>
+        </section>
+    </div>
+    <div class="content-wrapper">
+        <div class="box tour-dates">
+            <h1>Upcoming Shows</h1>
+            <div>
+                {{#each tourDates}}
+                    <div class="tour-date">
+                        <span>
+                            <span class="bold">
+                                {{this.title}} -
+                            </span>
+                         {{this.metadata.location}}
+                        </span>
+                        <span class="date">
+                         {{formatDate this.metadata.date}}
+                        </span>
+                        <div class="ticket-button">
+                            <a href="{{this.metadata.ticket_link}}">Get Tickets <i class="fa fa-long-arrow-right"></i></a>
+                        </div>
+                    </div>
+                {{/each}}
+            </div>
+        </div>
+        <div class="box">
+            <h1>Bio</h1>
+            <div class="bio">
+                {{truncateText settings.bio 70}}
+                <a href="/bio">Read More</a>
+            </div>
+        </div>
+    </div>
+    {{> footer}}
+</div>
