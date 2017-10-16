@@ -134,7 +134,6 @@ router.get('/photo-gallery/:slug', (req, res) => {
       res.locals.title = results.siteSettings.band_name + ' | ' + results.album.title
       res.locals.album = results.album
       res.locals.photos = results.album.metadata.photos
-      console.log(res.locals.photos)
       res.render('album.handlebars')
   })
 })
