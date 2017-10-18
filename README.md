@@ -20,7 +20,7 @@ COSMIC_BUCKET=your-bucket-slug npm start
 Open [http://localhost:3000](http://localhost:3000).
 
 ### Cosmic JS
-You can easily manage the content in your Band Website on Cosmic JS.  Cosmic JS makes a great [Express CMS](https://cosmicjs.com/knowledge-base/nodejs-cms).  Follow these steps:
+You can easily manage the content in your Band Website on Cosmic JS.  Cosmic JS makes a great [Node.js CMS](https://cosmicjs.com/knowledge-base/nodejs-cms).  Follow these steps:
 
 1. [Log in to Cosmic JS](https://cosmicjs.com).
 2. Create a Bucket.
