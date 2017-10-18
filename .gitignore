@@ -3,3 +3,4 @@ public/components
 .nyc_output
 .sass-cache
 config/development.js
+.DS_Store
