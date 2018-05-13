@@ -4,23 +4,25 @@ const Cosmic = require('cosmicjs')
 const async = require('async')
 const _ = require('lodash')
 const axios = require('axios')
+const config = require('../config')
+const api = Cosmic()
+const bucket = api.bucket({ slug: config.bucket.slug })
 
 router.get('/', (req, res) => {
-  const config = req.app.locals.cosmicConfig
   async.series({
     siteSettings(callback) {
-      Cosmic.getObject(config, { slug: 'site-settings' }, (error, response) => {
+      bucket.getObject({ slug: 'site-settings' }).then(response => {
         callback(null, response.object.metadata)
       })
     },
     homePage(callback) {
-      Cosmic.getObject(config, { slug: 'home-page' }, (error, response) => {
+      bucket.getObject({ slug: 'home-page' }).then(response => {
         callback(null, response.object.metadata)
       })
     },
     tourDates(callback) {
-      Cosmic.getObjectsByType(config, { type_slug: 'tour-dates' }, (error, response) => {
-        callback(null, response.objects.all)
+      bucket.getObjects({ type: 'tour-dates' }).then(response => {
+        callback(null, response.objects)
       })
     }
   }, (err, results) => {
@@ -45,16 +47,15 @@ router.get('/', (req, res) => {
 })
 
 router.get('/tour', async (req, res) => {
-  const config = req.app.locals.cosmicConfig
   async.series({
     siteSettings(callback) {
-      Cosmic.getObject(config, { slug: 'site-settings' }, (error, response) => {
+      bucket.getObject({ slug: 'site-settings' }).then(response => {
         callback(null, response.object.metadata)
       })
     },
     tourDates(callback) {
-      Cosmic.getObjectsByType(config, { type_slug: 'tour-dates' }, (error, response) => {
-        callback(null, response.objects.all)
+      bucket.getObjects({ type: 'tour-dates' }).then(response => {
+        callback(null, response.objects)
       })
     }
   }, (err, results) => {
@@ -78,16 +79,15 @@ router.get('/tour', async (req, res) => {
 })
 
 router.get('/photo-gallery', (req, res) => {
-  const config = req.app.locals.cosmicConfig
   async.series({
     siteSettings(callback) {
-      Cosmic.getObject(config, { slug: 'site-settings' }, (error, response) => {
+      bucket.getObject({ slug: 'site-settings' }).then(response => {
         callback(null, response.object.metadata)
       })
     },
     galleries(callback) {
-      Cosmic.getObjectsByType(config, { type_slug: 'galleries' }, (error, response) => {
-        callback(null, response.objects.all)
+      bucket.getObjects({ type: 'galleries' }).then(response => {
+        callback(null, response.objects)
       })
     }
   }, (err, results) => {
@@ -108,15 +108,14 @@ router.get('/photo-gallery', (req, res) => {
 })
 
 router.get('/photo-gallery/:slug', (req, res) => {
-  const config = req.app.locals.cosmicConfig
   async.series({
     siteSettings(callback) {
-      Cosmic.getObject(config, { slug: 'site-settings' }, (error, response) => {
+      bucket.getObject({ slug: 'site-settings' }).then(response => {
         callback(null, response.object.metadata)
       })
     },
     album(callback) {
-      Cosmic.getObject(config, { slug: req.params.slug }, (err, response) => {
+      bucket.getObject({ slug: req.params.slug }).then(response => {
         callback(null, response.object)
       })
     }
@@ -139,16 +138,15 @@ router.get('/photo-gallery/:slug', (req, res) => {
 })
 
 router.get('/videos', (req, res) => {
-  const config = req.app.locals.cosmicConfig
   async.series({
     siteSettings(callback) {
-      Cosmic.getObject(config, { slug: 'site-settings' }, (error, response) => {
+      bucket.getObject({ slug: 'site-settings' }).then(response => {
         callback(null, response.object.metadata)
       })
     },
     videos(callback) {
-      Cosmic.getObjectsByType(config, { type_slug: 'videos' }, (error, response) => {
-        callback(null, response.objects.all)
+      bucket.getObjects({ type: 'videos' }).then(response => {
+        callback(null, response.objects)
       })
     }
   }, (err, results) => {
@@ -169,10 +167,9 @@ router.get('/videos', (req, res) => {
 })
 
 router.get('/bio', (req, res) => {
-  const config = req.app.locals.cosmicConfig
   async.series({
     siteSettings(callback) {
-      Cosmic.getObject(config, { slug: 'site-settings' }, (error, response) => {
+      bucket.getObject({ slug: 'site-settings' }).then(response => {
         callback(null, response.object.metadata)
       })
     }
