@@ -4,3 +4,4 @@ public/components
 .sass-cache
 config/development.js
 .DS_Store
+.idea
