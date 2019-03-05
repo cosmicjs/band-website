@@ -10,7 +10,6 @@ cd band-website
 npm i
 ```
 #### Run in development
-1. [Log in to Cosmic JS](https://cosmicjs.com).
 
 ```
 npm run dev
