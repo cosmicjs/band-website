@@ -10,9 +10,20 @@ cd band-website
 npm i
 ```
 #### Run in development
+
 ```
 npm run dev
+
 ```
+
+You can easily access content from your Cosmic JS Bucket.
+1. [Log in to Cosmic JS](https://cosmicjs.com).
+2. Create a Bucket.
+3. Go to your Bucket dashboard and find the Settings > Basic Settings menu.
+4. Generate keys for Read/Write access for this bucket.
+5. Safely store these secrets as env variables to be accessed for local development: `COSMIC_READ_KEY` and `COSMIC_WRITE_KEY`
+6. Now when you run `npm run dev` you should see content from your bucket hydrating your views. 
+
 #### Run in production
 ```
 COSMIC_BUCKET=your-bucket-slug npm start

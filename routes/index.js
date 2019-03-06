@@ -6,7 +6,7 @@ const _ = require('lodash')
 const axios = require('axios')
 const config = require('../config')
 const api = Cosmic()
-const bucket = api.bucket({ slug: config.bucket.slug })
+const bucket = api.bucket(config.bucket)
 
 router.get('/', (req, res) => {
   async.series({
